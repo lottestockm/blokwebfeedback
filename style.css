@@ -95,6 +95,51 @@ section.homepagelink a {
     border-radius: 30px;
     text-align: center;
 }
+/* boek een workshop pagina */
+.taart{
+    height: 6em;
+    width:auto;
+    
+}
+
+section.workshops {
+    background-color: white;
+    margin: 2em auto;
+    max-width: 750px;
+    padding: 2em;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section.workshops div {
+    width:auto;
+    flex-direction: column;
+    padding-left: 2em;
+    min-width: 10em;
+    max-width: 30em;
+}
+h1.workshophoofdtekst{
+    color: rgb(51, 86, 183);
+    background-color: white;
+    border-radius: 30px;
+    margin: 2em auto;
+    max-width: 10em;
+    padding: 1em;
+    text-align: center;
+}
+.ticketlink{
+    display: inline-block;
+    margin-top: 0.5em;
+    background-color: rgb(51, 86, 183);
+    color: white;
+    padding:0.5em;
+    border-radius: 30px;
+    float:right;
+}
+
+
+
 /* media query van als het scherm groter wordt dan een tablet formaat */
 @media screen and (min-width:768px){
     /* linkjes op de homepage */
