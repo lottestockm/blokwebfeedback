@@ -2,24 +2,41 @@
     padding: 0;
     margin: 0;
 }
+body {
+    /* bron: https://css-tricks.com/perfect-full-page-background-image/ */
+    background: url('images/appeltaart.jpg') no-repeat center center fixed;
+    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
+}
 /* Dit is de navigatie */
 nav {
     color: rgb(51, 86, 183);
     padding-top: 1em;
     display:flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin: 0 60px;
-  
+    background-color: white;
+    width:100%;
+    
 }
-
-ul {
+/* dit gaat over het profiel icoontje, en of hij zichtbaar is */
+.mobilenone{
+    display: none;
+}
+.profielicoon{
+    width: 32px;
+    margin-left: auto;
+}
+nav ul {
     list-style-type: none;
     /* Hier maak je een flexbox aan*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    flex-wrap:wrap;
    
 }
 
@@ -37,7 +54,62 @@ ul a {
 
 }
 
-img{
-    width: 6em;
-    height: inherit;
+.logo{
+    width: 6rem;
+    height: auto;
+    align-self: center;
+    
+}
+/* dit spreek het profiel icoontje aan */
+nav ul:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* de h1 op de homepagina */
+h1.homepaginatekst {
+    color: rgb(51, 86, 183);
+    padding: 40px;
+    margin: 30px 50px 30px 50px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/* linkjes op de homepagina */
+section.homepagelink{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+section.homepagelink a {
+    display: block;
+    color: burlywood;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+/* media query van als het scherm groter wordt dan een tablet formaat */
+@media screen and (min-width:768px){
+    /* linkjes op de homepage */
+    section.homepagelink {
+            flex-direction: row;
+    }
+    /*zichtbaarheid van de profiel icoon*/
+    .mobiledisplay {
+        display: none;
+    } 
+    .mobilenone {
+        display: block;
+    }
+    /*navigatie*/
+    nav {
+        flex-direction: row;
+    }
 }
