@@ -109,7 +109,13 @@ section.homepagelink a {
     background-color: white;
     border-radius: 30px;
     text-align: center;
+    transition: all 0.1s ease-in;
 }
+section.homepagelink a:hover {
+    background-color:  rgb(51, 86, 183);
+    color:white;
+}
+
 /* boek een workshop pagina */
 .taart{
     height: 6em;
