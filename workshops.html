@@ -11,14 +11,14 @@
         <nav>
            
            <ul>
-               <li><img class="logo"src="images/hhb%20logo%20.png" alt="heel holland bakt logo">
+               <li><a href="index.html"><img class="logo"src="images/hhb%20logo%20.png" alt="heel holland bakt logo"></a>
                </li>
                <li><img class="profielicoon mobiledisplay" src="images/profiel-icoon.svg" alt="profielicoon">
                </li>
            </ul>
             
                <ul>
-                <li><a href="workshops.html">Workshops</a>
+                <li class='actief'><a href="workshops.html">Workshops</a>
                 </li>
                 <li><a href="">Ontdek</a>
                 </li>
@@ -30,7 +30,18 @@
         </nav>
     </header>
     <main>
+        <section class=tekstenzoekveld>
         <h1 class='workshophoofdtekst'>Boek hier je workshop</h1>
+      
+            <form action="">
+            <label for="zoek">Zoek een workshop</label>
+            <input class='zoekbalk' type="text" id='zoek' placeholder="plaats, tijd of workshop">
+        </form>
+        <img src="images/filter.svg" alt="filtericoon" class='filter'>
+       
+        </section>
+       
+        
         <section class='workshops'>
             <img class='taart' src="images/chocoladetaart%20met%20rood%20fruit.jpg" alt="chocoladetaart">
             <div class='workshoptekst'>
@@ -39,7 +50,9 @@
             <p>Minimaal 12 personen. Duur: 4 uur. De workshop bestaat uit een signatuur opdracht en een technische opdracht.</p>
             <a class='ticketlink' href="#">Ticket 400 euro</a>
             </div>
+            
         </section>
+        
         <section class='workshops'>
             <img class='taart' src="images/baked-fruitcake-cheesecake.webp" alt="chocoladetaart">
             <div class='workshoptekst'>
