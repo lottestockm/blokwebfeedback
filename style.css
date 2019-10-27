@@ -9,9 +9,11 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+    font-family: sans-serif;
   
 }
-/* Dit is de navigatie */
+/* NAVIGATIE
+--------------------------------------------------------*/
 nav {
     color: rgb(51, 86, 183);
     padding-top: 1em;
@@ -81,6 +83,9 @@ nav ul:first-child {
     flex-direction: row;
     justify-content: center;
 }
+
+/*HOMEPAGINA
+-------------------------------------------------------*/
 /* de h1 op de homepagina */
 h1.homepaginatekst {
     color: rgb(51, 86, 183);
@@ -110,13 +115,27 @@ section.homepagelink a {
     border-radius: 30px;
     text-align: center;
     transition: all 0.1s ease-in;
-}
+} 
 section.homepagelink a:hover {
     background-color:  rgb(51, 86, 183);
     color:white;
 }
 
-/* boek een workshop pagina */
+
+
+
+/* WORKSHOPPAGINA
+-------------------------------------------------------*/
+
+/* Grid gemaakt, minmx geeft aan op welk moment hij breekt als hij te klein wordt */
+.workshopblok{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    margin: 15px;
+    
+}
+
 .taart{
     height: 6em;
     width:auto;
@@ -126,18 +145,21 @@ section.homepagelink a:hover {
 section.workshops {
     background-color: white;
     margin: 2em auto;
-    max-width: 750px;
+/*    width: 15em;*/
+    max-width: 20em;
     padding: 2em;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    transition: all 0.1s ease-in;
+/*    transition: all 0.1s ease-in;*/
 }
 
+/*
 section.workshops:hover{
     padding: 2.3em;
 }
+*/
 
 section.workshops div {
     width:auto;
@@ -147,15 +169,38 @@ section.workshops div {
     max-width: 30em;
 }
 
+/* link van de ticket*/
+.ticketlink{
+    display: inline-block;
+    margin-top: 0.5em;
+    background-color: rgb(51, 86, 183);
+    color: white;
+    padding:0.75em;
+    border-radius: 30px;
+    float:right;
+    transition: all 0.1s ease;
+    position: relative;
+    transform: scale(1);
+    transform-origin: top;
+}
+
+.ticketlink:hover{
+    transform: scale(1.1);
+    top: 0.1em;
+}
+
 /* hoofdtekst en zoekveld + filter */
 h1.workshophoofdtekst{
     color: rgb(51, 86, 183);
     background-color: white;
     border-radius: 30px;
     margin: auto;
-    max-width: 10em;
+    max-width: 30em;
     padding: 1em;
     text-align: center;
+    font-size: 48px;
+    
+
 }
 
 section.tekstenzoekveld{
@@ -163,38 +208,37 @@ section.tekstenzoekveld{
     background-color: white;
     border-radius: 30px;
     margin: 2em auto;
-    max-width: 10em;
+    max-width: 30em;
     padding: 1em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .zoekbalk{
     border: rgb(51, 86, 183) 3px solid;
+    border-radius: 30pc;
+    display:block;
+    padding: 0.5em 7em 0.5em 0.5em;
+    
+    margin:auto;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+input::placeholder{
+    
 }
 
 .filter {
     width: 2em;
+    margin: auto;
 }
 
 
-/* link van de ticket*/
-.ticketlink{
-    display: inline-block;
-    margin-top: 0.5em;
-    background-color: rgb(51, 86, 183);
-    color: white;
-    padding:0.5em;
-    border-radius: 30px;
-    float:right;
-    transition: all 0.1s ;
-}
-
-.ticketlink:hover{
-    transform: scale(1.1);
-}
 
 
-/* media query van als het scherm groter wordt dan een tablet formaat */
+
+/* MEDIA QUERY van als het scherm groter wordt dan een tablet formaat */
 @media screen and (min-width:768px){
     /* linkjes op de homepage */
     section.homepagelink {
