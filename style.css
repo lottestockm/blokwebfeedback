@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
 }
 body {
     /* bron: https://css-tricks.com/perfect-full-page-background-image/ */
@@ -9,9 +10,11 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
   
 }
+
+
 /* NAVIGATIE
 --------------------------------------------------------*/
 nav {
@@ -23,8 +26,12 @@ nav {
     justify-content: space-between;
     background-color: white;
     width:100%;
-    
+    position: fixed;
+    top:0;
+   
+   
 }
+
 /* dit gaat over het profiel icoontje, en of hij zichtbaar is */
 .mobilenone{
     display: none;
@@ -90,7 +97,7 @@ nav ul:first-child {
 h1.homepaginatekst {
     color: rgb(51, 86, 183);
     padding: 40px;
-    margin: 30px 50px 30px 50px;
+    margin: 150px 50px 30px 50px;
     background-color: white;
     border-radius: 30px;
     text-align: center;
@@ -122,8 +129,21 @@ section.homepagelink a:hover {
 }
 
 
+/* algemene voorwaarden */
 
 
+
+.alg {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+p.yay {
+    background-color: white;
+    border: 3px solid white;
+    margin: 3em;
+    opacity: 1;
+}
 /* WORKSHOPPAGINA
 -------------------------------------------------------*/
 
@@ -152,14 +172,9 @@ section.workshops {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-/*    transition: all 0.1s ease-in;*/
 }
 
-/*
-section.workshops:hover{
-    padding: 2.3em;
-}
-*/
+
 
 section.workshops div {
     width:auto;
@@ -170,23 +185,38 @@ section.workshops div {
 }
 
 /* link van de ticket*/
-.ticketlink{
+button, .ticketlink{
     display: inline-block;
     margin-top: 0.5em;
     background-color: rgb(51, 86, 183);
     color: white;
     padding:0.75em;
     border-radius: 30px;
-    float:right;
     transition: all 0.1s ease;
     position: relative;
     transform: scale(1);
     transform-origin: top;
+    z-index: 0;
 }
 
-.ticketlink:hover{
+.ticketlink{
+    float: right;
+}
+
+button{
+    margin-left: 15em;   
+}
+
+.tekstenzoekveld .ticketlink {
+    float: none;
+    display: inline-block;
+    z-index: 0;
+}
+
+button, .ticketlink:hover{
     transform: scale(1.1);
     top: 0.1em;
+    
 }
 
 /* hoofdtekst en zoekveld + filter */
@@ -196,7 +226,7 @@ h1.workshophoofdtekst{
     border-radius: 30px;
     margin: auto;
     max-width: 30em;
-    padding: 1em;
+    padding: 1em ;
     text-align: center;
     font-size: 48px;
     
@@ -207,35 +237,44 @@ section.tekstenzoekveld{
     color: rgb(51, 86, 183);
     background-color: white;
     border-radius: 30px;
-    margin: 2em auto;
+    margin: 1em auto;
     max-width: 30em;
     padding: 1em;
+    padding-bottom: 0.5em;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-top: 150px;
+    
 }
 
 .zoekbalk{
     border: rgb(51, 86, 183) 3px solid;
     border-radius: 30pc;
-    display:block;
+    display:inline-block;
     padding: 0.5em 7em 0.5em 0.5em;
     
     margin:auto;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
 }
-input::placeholder{
+
+label[for="zoek"]{
+    display: block;
+    font-weight: 700;
+}
+fieldset{
+    margin-top: 20px;
+}
+
+legend{
+    font-weight: 700; 
+}
+
+input:focus{
+    outline: 3px solid pink;
     
 }
-
-.filter {
-    width: 2em;
-    margin: auto;
-}
-
-
-
 
 
 /* MEDIA QUERY van als het scherm groter wordt dan een tablet formaat */

@@ -5,6 +5,7 @@
     <title>Workshops</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
      <header>
@@ -34,11 +35,31 @@
         <section class=tekstenzoekveld>
         <h1 class='workshophoofdtekst'>Boek hier je workshop</h1>
       
-            <form action="">
+        <form action="">
+            <fieldset>
             <label for="zoek">Zoek een workshop</label>
             <input class='zoekbalk' type="text" id='zoek' placeholder="plaats, tijd of workshop">
+            <button class="ticketlink">zoeken</button>
+            </fieldset>
+            
+            <fieldset>
+           <!-- <label for="groep">Wil je met een groep of alleen</label> -->
+           <legend>Wil je met een groep of alleen?</legend>
+            <label for="groep">Groep</label>
+            <input type="checkbox" id='groep'  >
+            <label for="alleen">Alleen</label>
+            <input type="checkbox" id='alleen'  >
+
+            </fieldset>
+           
+            <fieldset>
+            <legend>Hoe lang wil je dat de workshop duurt?</legend>
+            <input type="range" name="rating" value="1" min="1" max="4" oninput="rating_disp.value = rating.value">
+            <output id="rating_disp">1</output>
+                
+            </fieldset>
         </form>
-        <img src="images/filter.svg" alt="filtericoon" class='filter'>
+       
        
         </section>
        
